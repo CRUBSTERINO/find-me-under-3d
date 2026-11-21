@@ -219,11 +219,8 @@ window.SIM = window.SIM || {};
     const body = $('compareBody'); body.innerHTML = '';
     body.appendChild(S.el('p', { class: 'tasks-intro', text: S.t('tasks.intro') }));
     const ol = S.el('ol', { class: 'tasks' });
-    S.TEXT.en.tasks.items.forEach((it) => ol.appendChild(S.el('li', {}, [
-      S.el('div', { class: 'task-q', text: it.q }),
-      S.el('div', { class: 'task-h' }, [S.el('b', { text: S.t('tasks.sim') + ': ' }), S.el('span', { text: it.sim })]),
-      S.el('div', { class: 'task-h' }, [S.el('b', { text: S.t('tasks.res') + ': ' }), S.el('span', { text: it.res })])
-    ])));
+    const hint = (k, v) => v && String(v).trim() ? [S.el('div', { class: 'task-h' }, [S.el('b', { text: S.t(k) + ': ' }), S.el('span', { text: v })])] : [];
+    S.TEXT.en.tasks.items.forEach((it) => ol.appendChild(S.el('li', {}, [S.el('div', { class: 'task-q', text: it.q })].concat(hint('tasks.sim', it.sim), hint('tasks.res', it.res)))));
     body.appendChild(ol);
     $('compareTitle').textContent = S.t('tasks.title');
     $('compare').classList.add('open');
