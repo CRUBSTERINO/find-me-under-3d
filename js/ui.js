@@ -215,6 +215,20 @@ window.SIM = window.SIM || {};
     m.classList.add('open');
   }
 
+  function showTasks() {
+    const body = $('compareBody'); body.innerHTML = '';
+    body.appendChild(S.el('p', { class: 'tasks-intro', text: S.t('tasks.intro') }));
+    const ol = S.el('ol', { class: 'tasks' });
+    S.TEXT.en.tasks.items.forEach((it) => ol.appendChild(S.el('li', {}, [
+      S.el('div', { class: 'task-q', text: it.q }),
+      S.el('div', { class: 'task-h' }, [S.el('b', { text: S.t('tasks.sim') + ': ' }), S.el('span', { text: it.sim })]),
+      S.el('div', { class: 'task-h' }, [S.el('b', { text: S.t('tasks.res') + ': ' }), S.el('span', { text: it.res })])
+    ])));
+    body.appendChild(ol);
+    $('compareTitle').textContent = S.t('tasks.title');
+    $('compare').classList.add('open');
+  }
+
   U.init = function () {
     st.cond = Object.assign({}, S.CONFIG.conditions);
     S.view.setNight(st.cond.night);
@@ -235,6 +249,7 @@ window.SIM = window.SIM || {};
       renderPanel(); renderLog();
     };
     $('btnCompare').onclick = showCompare;
+    $('btnTasks').onclick = showTasks;
     $('compareClose').onclick = () => $('compare').classList.remove('open');
     $('compare').onclick = (e) => { if (e.target.id === 'compare') $('compare').classList.remove('open'); };
     $('btnHelp').onclick = () => $('hint').classList.toggle('hidden');

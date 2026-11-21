@@ -4,6 +4,10 @@ A 3D model of three collapsed buildings. Participants deploy six search tools, s
 
 This project is separate from the 2D planning prototype in `../challenge` and does not touch it.
 
+## Hackathon tasks
+
+Teams answer six questions, using the simulator and their own research: the standard kit, the limits of search, what was missing in real operations, cheap hardware and physics, algorithms and ML, and what the model leaves out. The list opens from the "Tasks" button in the top bar and is also in [docs/hackathon-questions.md](docs/hackathon-questions.md), with optional deeper questions.
+
 ## Run
 
 Open `index.html` in Chrome, Firefox or Edge. It works straight from disk (`file://`), with no install, no build step and no internet. three.js is bundled in `lib/`.

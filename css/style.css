@@ -157,6 +157,12 @@ body.teacher .log-row.f-yes .lr-sum::after { content: " ✔"; color: var(--yes);
 table.cmp { border-collapse: collapse; font-size: 13px; }
 table.cmp th { text-align: left; background: #f1f3f4; padding: 6px 8px; font-size: 12px; }
 table.cmp td { padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tasks-intro { margin: 0 0 10px; font-size: 14px; max-width: 760px; }
+ol.tasks { margin: 0; padding-left: 22px; max-width: 760px; font-size: 13px; }
+ol.tasks li { margin-bottom: 12px; }
+ol.tasks li::marker { font-weight: 700; }
+.task-q { font-weight: 700; font-size: 14px; margin-bottom: 3px; }
+.task-h { color: #444; margin-top: 2px; }
 .cmp-tool { display: flex; align-items: center; gap: 6px; font-weight: 700; min-width: 170px; }
 .cmp-tool svg { color: var(--tc); }
 .cmp-strengths { color: #00573f; }

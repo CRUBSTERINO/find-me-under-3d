@@ -1,4 +1,29 @@
-# Questions for the hackathon
+# Hackathon tasks
+
+Answer these questions using the simulator and your own research. Where the two disagree, explain why. The same list opens from the "Tasks" button in the simulator.
+
+1. **Which tools make up a rescuer's standard kit? What do teams use today?**
+   - Simulator: open "Compare tools", then play levels 5 and 6, where you buy a kit on a budget.
+   - Research: INSARAG equipment lists, real devices and prices (Delsar, SearchCam, LifeLocator), what THW, FEMA and others carry.
+2. **Which factors do you have to take into account? Is it possible to save everyone at all?**
+   - Simulator: change noise, day or night and hours since collapse. Look for the "No tool here would detect" line in the debrief.
+   - Research: survival curves for buried people, the first 72 hours, building types and collapse patterns.
+3. **What did rescuers lack in real operations, for example in Ukraine or Turkey?**
+   - Simulator: find the situations where every tool fails and check whether the same gaps show up in the reports.
+   - Research: after-action reports and interviews: Turkey 2023, strikes on residential buildings in Ukraine, Surfside 2021 and others.
+4. **Brainstorm ways to solve the current problems.** Gap analysis: what could cheap hardware replace (a smartphone, Raspberry Pi, microphones, ESP32, Wi-Fi CSI, a drone with a thermal camera, mmWave radar for tens or hundreds of dollars)? Where does physics stop you?
+   - Simulator: describe your device with the same parameters as the tools in `js/config.js`: what it measures, range, time, price. Which hidden people would it reach?
+   - Research: datasheets and papers on low-cost sensing, signal loss through concrete, open projects that already exist.
+5. **Can algorithms or machine learning make the search faster or more accurate? What are the options?**
+   - Simulator: use the test log and the debrief to see which order of tools found people and which led to false marks.
+   - Research: sensor fusion, search planning, signal classification, drone path planning, published results and their limits.
+6. **Which other challenges are missing from the simulation? What does it simplify?**
+   - Simulator: read the "Simplifications" part of the README and `docs/realism.md`, then find a case where the model is wrong.
+   - Research: secondary collapse, coordinating several teams, triage, broken mobile networks, extraction.
+
+---
+
+## More questions (optional)
 
 Answer each question in two ways: with an experiment in the simulation (what you did and what you saw) and with research (sources, interviews, data). Where the two answers disagree, explain why. The explanation is worth as much as the answer.
 

@@ -14,7 +14,7 @@ SIM.TEXT = {
       noResult: 'Choose a tool and click in the scene',
       resetView: 'Reset view (R)', xray: 'X-ray: show slabs and voids (X)',
       debug: 'Teacher mode: show people and reasons', debugOn: 'TEACHER',
-      compare: 'Compare tools', help: 'Hint',
+      compare: 'Compare tools', tasks: 'Tasks', help: 'Hint',
       clear: 'Clear tests', clearConfirm: 'Delete all tests?',
       returns: 'Returns', pros: 'Pros', cons: 'Cons', how: 'How to use',
       close: 'Close', condAt: 'Test conditions', useNow: 'Recompute now',
@@ -179,6 +179,31 @@ SIM.TEXT = {
         how: 'Click the centre of an area (6 m radius). Let the dog rest.',
         cmp: { returns: 'Alert + direction', strengths: 'Speed, live scent', weaknesses: 'Fatigue, depth, other scents', needs: 'Handler, rest, few people', time: '≈10-20 min/area', cost: '€ (years of training)' }
       }
+    },
+    tasks: {
+      title: 'Hackathon tasks',
+      intro: 'Answer these questions using the simulator and your own research. Where the two disagree, explain why.',
+      sim: 'In the simulator', res: 'Research',
+      items: [
+        { q: 'Which tools make up a rescuer\'s standard kit? What do teams use today?',
+          sim: 'Open "Compare tools", then play levels 5 and 6, where you buy a kit on a budget.',
+          res: 'INSARAG equipment lists, real devices and prices (Delsar, SearchCam, LifeLocator), what THW, FEMA and others carry.' },
+        { q: 'Which factors do you have to take into account? Is it possible to save everyone at all?',
+          sim: 'Change noise, day or night and hours since collapse. Look for the "No tool here would detect" line in the debrief.',
+          res: 'Survival curves for buried people, the first 72 hours, building types and collapse patterns.' },
+        { q: 'What did rescuers lack in real operations, for example in Ukraine or Turkey?',
+          sim: 'Find the situations where every tool fails and check whether the same gaps show up in the reports.',
+          res: 'After-action reports and interviews: Turkey 2023, strikes on residential buildings in Ukraine, Surfside 2021 and others.' },
+        { q: 'Brainstorm ways to solve the current problems. Gap analysis: what could cheap hardware replace (a smartphone, Raspberry Pi, microphones, ESP32, Wi-Fi CSI, a drone with a thermal camera, mmWave radar for tens or hundreds of dollars)? Where does physics stop you?',
+          sim: 'Describe your device with the same parameters as the tools in js/config.js: what it measures, range, time, price. Which hidden people would it reach?',
+          res: 'Datasheets and papers on low-cost sensing, signal loss through concrete, open projects that already exist.' },
+        { q: 'Can algorithms or machine learning make the search faster or more accurate? What are the options?',
+          sim: 'Use the test log and the debrief to see which order of tools found people and which led to false marks.',
+          res: 'Sensor fusion, search planning, signal classification, drone path planning, published results and their limits.' },
+        { q: 'Which other challenges are missing from the simulation? What does it simplify?',
+          sim: 'Read the "Simplifications" part of the README and docs/realism.md, then find a case where the model is wrong.',
+          res: 'Secondary collapse, coordinating several teams, triage, broken mobile networks, extraction.' }
+      ]
     },
     compare: {
       title: 'Compare tools',
