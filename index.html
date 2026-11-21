@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Search Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="top">
+    <h1 id="title"></h1>
+    <span class="teacher-badge" data-t="ui.debugOn"></span>
+    <span id="modeLabel"></span>
+    <div class="top-btns">
+      <button class="btn icon" id="btnLevels" data-icon="levels" data-tt="lvl.menu"><span data-t="lvl.menu"></span></button>
+      <button class="btn icon" id="btnCompare" data-icon="compare" data-tt="ui.compare"><span data-t="ui.compare"></span></button>
+      <button class="btn icon" id="btnHelp" data-icon="help" data-tt="ui.help"></button>
+      <button class="btn icon warn" id="btnDebug" data-icon="teacher" data-tt="ui.debug"></button>
+    </div>
+  </header>
+  <div id="app">
+    <aside id="left">
+      <div class="sec-title" data-t="ui.tools"></div>
+      <div id="toolList"></div>
+      <div id="toolCard"></div>
+    </aside>
+    <main id="viewWrap">
+      <canvas id="view"></canvas>
+      <div id="viewBtns">
+        <button class="btn icon" id="btnReset" data-icon="reset" data-tt="ui.resetView"></button>
+        <button class="btn icon" id="btnXray" data-icon="xray" data-tt="ui.xray"></button>
+      </div>
+      <div id="hint">
+        <ol>
+          <li><b>1</b><span data-t="hint.s1"></span></li>
+          <li><b>2</b><span data-t="hint.s2"></span></li>
+          <li><b>3</b><span data-t="hint.s3"></span></li>
+        </ol>
+        <div class="hint-nav" data-t="hint.nav"></div>
+        <button class="btn small" id="hintOk" data-t="hint.ok"></button>
+      </div>
+      <div id="toast"></div>
+      <div id="levelHud"></div>
+      <div id="conditions">
+        <div class="cond-group" data-tt="cond.noise">
+          <span class="ci" data-icon="noise"></span>
+          <span class="cl" data-t="cond.noise"></span>
+          <input type="range" id="noise" min="0" max="100" step="5">
+          <span class="cv" id="noiseVal"></span>
+        </div>
+        <div class="cond-group seg">
+          <button class="btn seg-b" id="btnDay" data-icon="sun"><span data-t="cond.day"></span></button>
+          <button class="btn seg-b" id="btnNight" data-icon="moon"><span data-t="cond.night"></span></button>
+        </div>
+        <div class="cond-group" data-tt="cond.hours">
+          <span class="ci" data-icon="clock"></span>
+          <span class="cl" data-t="cond.hours"></span>
+          <input type="range" id="hours" min="1" max="96" step="1">
+          <span class="cv" id="hoursVal"></span>
+        </div>
+      </div>
+    </main>
+    <aside id="right">
+      <section id="result">
+        <div class="sec-title" data-t="ui.result"></div>
+        <div id="resultHead"></div>
+        <div id="resultBody"></div>
+      </section>
+      <section id="log">
+        <div class="sec-title"><span data-t="ui.log"></span>
+          <button class="btn icon tiny" id="btnClear" data-icon="trash" data-tt="ui.clear"></button></div>
+        <div id="logList"></div>
+      </section>
+    </aside>
+  </div>
+  <div id="modal">
+    <div class="modal">
+      <div class="modal-head"><h2 id="modalTitle"></h2><button class="btn small" id="modalClose">✕</button></div>
+      <div id="modalBody"></div>
+      <div id="modalFoot"></div>
+    </div>
+  </div>
+  <div id="compare">
+    <div class="modal">
+      <div class="modal-head"><h2 id="compareTitle"></h2><button class="btn small" id="compareClose" data-t="ui.close"></button></div>
+      <div id="compareBody"></div>
+    </div>
+  </div>
+  <script src="lib/three.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/texts.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/scenario.js"></script>
+  <script src="js/scenarios/panel9.js"></script>
+  <script src="js/scenarios/masonry5.js"></script>
+  <script src="js/scenarios/frame4.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/tools/geophone.js"></script>
+  <script src="js/tools/camera.js"></script>
+  <script src="js/tools/radar.js"></script>
+  <script src="js/tools/phone.js"></script>
+  <script src="js/tools/thermal.js"></script>
+  <script src="js/tools/dog.js"></script>
+  <script src="js/access.js"></script>
+  <script src="js/analysis.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/levels-ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
